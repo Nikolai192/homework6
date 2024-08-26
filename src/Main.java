@@ -6,6 +6,7 @@ public class Main {
         int totalMoney = 0;
         int month = 0;
         while (totalMoney <= total) {
+            totalMoney += totalMoney * 0.12;
             totalMoney += solary;
             month++;
             System.out.println("Месяц " + month + " , сумма накоплений равна " + totalMoney + " рублей");
@@ -37,8 +38,8 @@ public class Main {
         int totalDeposit = 0;
         int months = 0;
         while (totalDeposit <= allMoney) {
-            totalDeposit = totalDeposit + totalDeposit * 7 / 100;
-            totalDeposit = totalDeposit + deposit;
+            totalDeposit += totalDeposit * 7 / 100;
+            totalDeposit += deposit;
             months++;
             System.out.println("Месяц " + months + " сумма накоплений равна " + totalDeposit + " рублей");
         }
@@ -48,8 +49,8 @@ public class Main {
         int totalDeposits = 0;
         int monthss = 0;
         while (totalDeposits <= allMoneys) {
-            totalDeposits = totalDeposits + totalDeposits * 7 / 100;
-            totalDeposits = totalDeposits + deposits;
+            totalDeposits += totalDeposits * 7 / 100;
+            totalDeposits += deposits;
             monthss++;
             if (monthss % 6 == 0) {
                 System.out.println("Месяц " + monthss + " сумма накоплений равна " + totalDeposits + " рублей");
@@ -59,8 +60,8 @@ public class Main {
         int depositMoney = 15000;
         int allDeposit = 0;
         for (int k = 0; k <= 12 * 9; k++) {
-            allDeposit = allDeposit + allDeposit * 7 / 100;
-            allDeposit = allDeposit + depositMoney;
+            allDeposit += allDeposit * 7 / 100;
+            allDeposit += depositMoney;
             if (k % 6 ==0) {
                 System.out.println("Месяц " + k + " сумма накоплений равна " + allDeposit + " рублей");
             }
@@ -77,7 +78,5 @@ public class Main {
           if (t % 79 ==0)
           System.out.println(t);
       }
-
     }
-
     }
